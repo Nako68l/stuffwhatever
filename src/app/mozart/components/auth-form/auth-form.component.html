@@ -1,0 +1,14 @@
+<ly-card>
+  <ly-card-content>
+    <ng-content select=".header"></ng-content>
+    <ly-field>
+      <input lyNativeControl type="text" placeholder="email">
+    </ly-field>
+    <ly-field>
+      <input lyNativeControl type="text" placeholder="password">
+    </ly-field>
+  </ly-card-content>
+  <ly-card-actions>
+    <ng-content select=".submit-btn"></ng-content>
+  </ly-card-actions>
+</ly-card>
