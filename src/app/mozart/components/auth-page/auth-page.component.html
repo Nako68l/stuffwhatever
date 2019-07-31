@@ -1,22 +1,25 @@
 <div style="display: flex;
 justify-content: space-around;
 padding-top: 50px;">
-  <app-auth-form>
-    <h3 class="header">Mozart</h3>
-    <button  
-    class="submit-btn"
-    ly-button
-    bg="primary"
-    raised
-    (click)="allegro()">Submit</button>
-  </app-auth-form>
-  <app-auth-form>
+  <app-auth-form (submitted)="signUp($event)">
     <h3 class="header">Sign Up</h3>
     <button 
     class="submit-btn"
     ly-button
     bg="primary"
     raised
-    (click)="signUp()">Create account</button>
+    type="submit">Create account</button>
+  </app-auth-form>
+  <app-auth-form (submitted)="allegro($event)">
+    <h3 class="header">Mozart</h3>
+    <app-auth-remember 
+      (checked)="rememberUser($event)">
+    </app-auth-remember>
+    <button  
+    class="submit-btn"
+    ly-button
+    bg="primary"
+    raised
+    type="submit">Submit</button>
   </app-auth-form>
 </div>

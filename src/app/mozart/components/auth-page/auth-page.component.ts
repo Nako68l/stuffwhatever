@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../models/user.model';
 
 @Component({
   selector: 'app-auth-page',
@@ -6,17 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./auth-page.component.scss']
 })
 export class AuthPageComponent implements OnInit {
+  
+  rememberMe: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  allegro() {
-    console.log('allegro');
+  allegro(user: User): void {
+    console.log('allegro', user, this.rememberMe);
   }
 
-  signUp() {
-    console.log('Sign Up');
+  signUp(user: User): void {
+    console.log('Sign Up', user);
+  }
+
+  rememberUser(remember: boolean) {
+    this.rememberMe = remember;
   }
 }

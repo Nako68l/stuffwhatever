@@ -1,14 +1,20 @@
 <ly-card>
+ <form (submit)="onSubmit()" [formGroup]="authForm">
   <ly-card-content>
     <ng-content select=".header"></ng-content>
     <ly-field>
-      <input lyNativeControl type="text" placeholder="email">
+      <input lyNativeControl type="text" placeholder="email"
+      formControlName="email"
+      >
     </ly-field>
     <ly-field>
-      <input lyNativeControl type="text" placeholder="password">
+      <input lyNativeControl type="text" placeholder="password"
+      formControlName="password">
     </ly-field>
+    <ng-content select="app-auth-remember"></ng-content>
   </ly-card-content>
   <ly-card-actions>
     <ng-content select=".submit-btn"></ng-content>
   </ly-card-actions>
+</form>
 </ly-card>
