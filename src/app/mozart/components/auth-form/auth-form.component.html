@@ -12,6 +12,9 @@
       formControlName="password">
     </ly-field>
     <ng-content select="app-auth-remember"></ng-content>
+    <div *ngIf="isRemembered$ | async">
+      You will be remembered for 30 days!
+    </div>
   </ly-card-content>
   <ly-card-actions>
     <ng-content select=".submit-btn"></ng-content>
