@@ -14,7 +14,7 @@ import { LyCommonModule } from '@alyle/ui';
 import { LyCardModule } from '@alyle/ui/card';
 import { LyTypographyModule } from '@alyle/ui/typography';
 import { AuthRememberComponent } from './components/auth-remember/auth-remember.component';
-
+import { AuthMessageComponent } from './components/auth-message/auth-message.component';
 
 @NgModule({
   imports: [
@@ -31,8 +31,13 @@ import { AuthRememberComponent } from './components/auth-remember/auth-remember.
     LyCommonModule,
     LyCardModule,
     LyTypographyModule,
-    LyCheckboxModule
+    LyCheckboxModule,
   ],
-  declarations: [AuthPageComponent, AuthFormComponent, AuthRememberComponent]
+  declarations: [
+    AuthPageComponent,
+    AuthFormComponent,
+    AuthRememberComponent,
+    AuthMessageComponent,
+  ],
 })
-export class MozartModule { }
+export class MozartModule {}
